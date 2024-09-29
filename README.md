@@ -149,7 +149,7 @@ What is happening in the background - (`nmap -v`) verbose
 
 finding more info with **sC**ripts - `nmap -sC <ip>`
 
-***V**ersion, **O**perating system, s**c**ript scanning together (-sV -O -sC)* - `nmap -A <ip>`
+**V**ersion, **O**perating system, s**c**ript scanning together (-sV -O -sC) - `nmap -A <ip>`
 
 **(-sC -sV -O) = (-A)**
 
