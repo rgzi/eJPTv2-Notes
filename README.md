@@ -1,6 +1,6 @@
 # eJPTv2-Notes
 
-# eJPTv2 (Jr. Penetration Testing)
+
 
 # **Information Gathering** - **Reconnaissance** (the first step) (part of Assessment Methodologies)
 
