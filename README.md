@@ -383,7 +383,7 @@ File Explorer → Network → Map Network → \\<ip>\ → Browse
     - `enumdomusers` - user list
     - `lookupnames <name>`
 - **smbclient**:`smbclient -L <ip> -N` - listing Shares, `-L`=lists by ip, `-N`=no password
-- **enum4linux**: **`enum4linux -a <ip>` (`-a`- all simple enumeration)
+- **enum4linux**: `enum4linux -a <ip>` (`-a`- all simple enumeration)
     - `enum4linux -U <ip>` - user list
     - `enum4linux -o <ip>` - OS information
 
