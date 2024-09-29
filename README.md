@@ -376,13 +376,13 @@ File Explorer → Network → Map Network → \\<ip>\ → Browse
     - Inside of Drive with **`-r <drive>`** - as an example, `-r c$`
     - File Uploading: `smbmap -u <user> -p <password> -H <target> —upload /root/file c$/file`
     - File Downloading: `smbmap -u <user> -p <password> -H <target> —download c$/file` (c$ - C: Drive)
-- **nmblookup:`nmblookup -A <ip>` - querying NetBIOS names
+- nmblookup:`nmblookup -A <ip>` - querying NetBIOS names
     - **SAMBA** is an open-source implementation of SMB
-- **rpcclient**: **`rpcclient -U “” -N <ip>`  - (`-U` - username, `-N` - no password)
+- **rpcclient**: `rpcclient -U “” -N <ip>`  - (`-U` - username, `-N` - no password)
     - After access, `srvinfo` - server info about SAMBA
     - `enumdomusers` - user list
     - `lookupnames <name>`
-- **smbclient**:**`smbclient -L <ip> -N` - listing Shares, `-L`=lists by ip, `-N`=no password
+- **smbclient**:`smbclient -L <ip> -N` - listing Shares, `-L`=lists by ip, `-N`=no password
 - **enum4linux**: **`enum4linux -a <ip>` (`-a`- all simple enumeration)
     - `enum4linux -U <ip>` - user list
     - `enum4linux -o <ip>` - OS information
