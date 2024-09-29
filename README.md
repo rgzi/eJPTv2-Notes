@@ -67,7 +67,7 @@ intext:admin - searches for the given word in the body of the text somewhere
 
 ### Email Harvesting (*subdomains*, IPs, as well)
 
-    `theHarvester -d <domain name>' - searches through a domain name for finding credentials 
+    theHarvester -d <domain name> - searches through a domain name for finding credentials 
 
 ### Leaked passwords
 
@@ -189,17 +189,17 @@ finding more info with **sC**ripts - `nmap -sC <ip>`
 
 1. Physical layer - deals with physical connection of devices (Ethernet, Fiber, USB)
 
- 6.  Data Link layer - manages access to the physical medium, provides error detection (Physical addressing) (Switches)
+2.  Data Link layer - manages access to the physical medium, provides error detection (Physical addressing) (Switches)
 
-1. Network layer - responsible for routing (Logical Addressing) (IP, ICMP)
+3. Network layer - responsible for routing (Logical Addressing) (IP, ICMP)
 
- 4.  Transport layer - responsible for flow of control, end-to-end communication (TCP, UDP)  
+4.  Transport layer - responsible for flow of control, end-to-end communication (TCP, UDP)  
 
-1. Session layer - manages connections, handles with synchronization (APIs)
+5. Session layer - manages connections, handles with synchronization (APIs)
 
- 2.  Presentation layer - translates data between application and lower layers, encrypts and compresses data (SSL/TLS, JPIG)
+6.  Presentation layer - translates data between application and lower layers, encrypts and compresses data (SSL/TLS, JPIG)
 
-1. Application layer - provides network services to the end-users (HTTP, FTP, SSH) 
+7. Application layer - provides network services to the end-users (HTTP, FTP, SSH) 
 
 **TCP/IP** - TCP packet contains IP packet, because TCP requires IP. This is called **encapsulation**
 
@@ -403,7 +403,7 @@ Dictionary attack with Hydra:
 
 ## FTP (File Transfer Protocol)
 
-**`ftp <ip>` - for accessing ftp server, then you enter a username and password
+`ftp <ip>` - for accessing ftp server, then you enter a username and password
 
 - FTP password brute force with nmap: `nmap -p 21 —script=ftp-brute —script-args userdb=user.txt,passdb=pass.txt <target>`
 - If anonymous login is allowed: **username**=**anonymous**, **password**=”” (`-sC` gives it because of **`—ftp-anon`** script)
