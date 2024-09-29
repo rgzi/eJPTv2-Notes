@@ -21,9 +21,9 @@
 
 `whatweb <domain>` - web technology indicator in a terminal
 
-`sudo apt install ***webhttrack` -*** web site installer to a local directory (httrack)
+`sudo apt install webhttrack` - web site installer to a local directory (httrack)
 
-`whois** <domain name>` - domain ownership information **(website version is also available)**
+`whois <domain name>` - domain ownership information **(website version is also available)**
 
  [**netcraft.com**](http://netcraft.com) - all information about any website
 
@@ -43,9 +43,9 @@
 
 ### Subdomain Enumeration
 
-`sublist3r** -d <domain name>` - gives all found subdomains
+`sublist3r -d <domain name>` - gives all found subdomains
 
-`theHarvester** -d <domain> -b <source>` - not only domains but also emails, IPs
+`theHarvester -d <domain> -b <source>` - not only domains but also emails, IPs
 
 ### Google Dorks
 
@@ -67,7 +67,7 @@ intext:admin - searches for the given word in the body of the text somewhere
 
 ### Email Harvesting (*subdomains*, IPs, as well)
 
-    **`theHarvester** -d <domain name>` - searches through a domain name for finding credentials 
+    `theHarvester -d <domain name>` - searches through a domain name for finding credentials 
 
 ### Leaked passwords
 
@@ -115,11 +115,11 @@ Happens when admins transfer zone files from one DNS server to another one. If m
 
 ### DNSENUM, dig, fierce
 
-`dnsenum** <domain>` - active recon tool, DNS enumerator, **zone transfer tool** (active recon tool **unlike *dnsrecon***) 
+`dnsenum <domain>` - active recon tool, DNS enumerator, **zone transfer tool** (active recon tool unlike **dnsrecon**) 
 
-`dig** axfr @<nameserver> <domain>`  - active recon DNS Interrogation tool
+`dig axfr @<nameserver> <domain>`  - active recon DNS Interrogation tool
 
-`fierce** —domain <domain>` - DNS enumeration tool (active)
+`fierce —domain <domain>` - DNS enumeration tool (active)
 
 ### NMAP
 
