@@ -137,7 +137,7 @@ Example: `netdiscover -i eth0 -r <ip/24>`
 
 `sudo nmap -Pn -p1-65535 <ip>` - port range (all ports like -p-)
 
-`sudo nmap **-F** <ip>` - **100** most used ports (-F  -  fast)
+`sudo nmap -F <ip>` - **100** most used ports (-F  -  fast)
 
 UDP scanning - `nmap -sU <ip>`
 
