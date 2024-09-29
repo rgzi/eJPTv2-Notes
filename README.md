@@ -11,7 +11,7 @@
 
 ## Passive Recon
 
-**`host** <domain name>` - finds the **ip** address of a domain name
+`host** <domain name>` - finds the **ip** address of a domain name
 
 `robots.txt` (directory in URL) - indicates which portions of the website crawlers are allowed to visit.
 
@@ -23,13 +23,13 @@
 
 `sudo apt install ***webhttrack` -*** web site installer to a local directory (httrack)
 
-**`whois** <domain name>` - domain ownership information **(website version is also available)**
+`whois** <domain name>` - domain ownership information **(website version is also available)**
 
  [**netcraft.com**](http://netcraft.com) - all information about any website
 
 ### DNS RECON
 
-**`dnsrecon** -d <domain name>` - gives information about DNS (NS, MX, etc - name and mail servers)
+`dnsrecon** -d <domain name>` - gives information about DNS (NS, MX, etc - name and mail servers)
 
 [**dnsdumpster.com**](http://dnsdumpster.com) - dns lookup & research (more comprehensive than `dnsrecon`)
 
@@ -37,15 +37,15 @@
 
 **WAF - Web Application Firewall**
 
-**`wafw000f** <domain name>` - WAF recon utility, used for fingerprinting web firewalls.
+`wafw000f** <domain name>` - WAF recon utility, used for fingerprinting web firewalls.
 
-**`wafw00f** <domain> -a`  -  for all instances
+`wafw00f** <domain> -a`  -  for all instances
 
 ### Subdomain Enumeration
 
-**`sublist3r** -d <domain name>` - gives all found subdomains
+`sublist3r** -d <domain name>` - gives all found subdomains
 
-**`theHarvester** -d <domain> -b <source>` - not only domains but also emails, IPs
+`theHarvester** -d <domain> -b <source>` - not only domains but also emails, IPs
 
 ### Google Dorks
 
@@ -55,7 +55,7 @@ site:*.ine.com - gives fully and only **subdomains**
 
 inurl:admin - contains "admin" in every url
 
-****intitle:admin - contains "admin" in every title
+intitle:admin - contains "admin" in every title
 intitle:"index of" - directory misconfigurations (a type vulnerability)
 
 filetype:pdf - website contains files with they type of **pdf**
@@ -115,17 +115,17 @@ Happens when admins transfer zone files from one DNS server to another one. If m
 
 ### DNSENUM, dig, fierce
 
-**`dnsenum** <domain>` - active recon tool, DNS enumerator, **zone transfer tool** (active recon tool **unlike *dnsrecon***) 
+`dnsenum** <domain>` - active recon tool, DNS enumerator, **zone transfer tool** (active recon tool **unlike *dnsrecon***) 
 
-**`dig** axfr @<nameserver> <domain>`  - active recon DNS Interrogation tool
+`dig** axfr @<nameserver> <domain>`  - active recon DNS Interrogation tool
 
-**`fierce** —domain <domain>` - DNS enumeration tool (active)
+`fierce** —domain <domain>` - DNS enumeration tool (active)
 
 ### NMAP
 
 `sudo **nmap** -sn <ip/24>` - host scanning, no ports (finding ***devices*** in the **LAN**)
 
-**`netdiscover`** - host discovering 
+`netdiscover`** - host discovering 
 
 Example: `netdiscover -i eth0 -r <ip/24>`
 
