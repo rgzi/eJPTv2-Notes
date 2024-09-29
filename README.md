@@ -189,15 +189,15 @@ finding more info with **sC**ripts - `nmap -sC <ip>`
 
 1. Physical layer - deals with physical connection of devices (Ethernet, Fiber, USB)
 
-2.  Data Link layer - manages access to the physical medium, provides error detection (Physical addressing) (Switches)
+2. Data Link layer - manages access to the physical medium, provides error detection (Physical addressing) (Switches)
 
 3. Network layer - responsible for routing (Logical Addressing) (IP, ICMP)
 
-4.  Transport layer - responsible for flow of control, end-to-end communication (TCP, UDP)  
+4. Transport layer - responsible for flow of control, end-to-end communication (TCP, UDP)  
 
 5. Session layer - manages connections, handles with synchronization (APIs)
 
-6.  Presentation layer - translates data between application and lower layers, encrypts and compresses data (SSL/TLS, JPIG)
+6. Presentation layer - translates data between application and lower layers, encrypts and compresses data (SSL/TLS, JPIG)
 
 7. Application layer - provides network services to the end-users (HTTP, FTP, SSH) 
 
