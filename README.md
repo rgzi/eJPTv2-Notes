@@ -326,7 +326,7 @@ Using **entire** scripts of a service with a wildcard: `nmap —script=ftp- -p21
     **Note**: ***When we send ACK packet to a ports, that ports does not respond, it means port is **filtered**, if responds with RST, then port is **unfiltered**
     
 - **IDS** (Intrusion Detection System): `nmap -f --mtu 32 <ip>`
-    - **`-f` means **fragmentation** (a packet is broken to smaller pieces, `—mtu` means **M**aximum **T**ransmission **U**nit refers to the highest value of a packet in bytes.
+    - `-f` means **fragmentation** (a packet is broken to smaller pieces, `—mtu` means **M**aximum **T**ransmission **U**nit refers to the highest value of a packet in bytes.
     - These fragmentation makes it **harder** to be detected by IDS/IPS
 - **Spoofing:** `nmap -f —data-length 200 -D 10.23.21.1,10.23.21.2 -g 53 <ip>` - We use a decoy ip address and a port to fool IDS/IPS
     
