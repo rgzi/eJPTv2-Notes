@@ -309,7 +309,7 @@ For your wants: `ls /usr/share/nmap/scripts | grep brute` - scripts for brute fo
 
 **—Information about scripts**: `nmap —script-help=mongodb-databases`
 
-**—Using Scripts:** `nmap **—script**=http-form-brute**,**http-enum <ip>`  **(after comma without space)**
+**—Using Scripts:** `nmap —script=http-form-brute,http-enum <ip>`  **(after comma without space)**
 
 Using **entire** scripts of a service with a wildcard: `nmap —script=ftp- -p21 <ip>`
 
@@ -346,7 +346,7 @@ Using **entire** scripts of a service with a wildcard: `nmap —script=ftp- -p21
 
 Zenmap - GUI version of NMAP, has some features like topology, etc.
 
-**NOTE: IF a host does not have expected ports, then perform ****UDP* Scan**
+**NOTE: IF a host does not have expected ports, then perform **UDP* Scan**
 
 # Enumeration (Assess. Meth.)
 
@@ -371,7 +371,7 @@ File Explorer → Network → Map Network → \\<ip>\ → Browse
 
 - **Nmap** scripts like `smb-ls`, `smb-enum-sessions`, `smb-enum-users`, `smb-ls`, `smb-os-discovery`, **etc**. (for help, `—script-help=smb-enum-users`), `—script-args smbusername=user,smbpassword=password`
 - SMBMap: `smbmap -u <username> -p <password> -d <directory> -H <target ip>`  - finds **Shares (**`-u guest -p “” -d .` **)**
-    - RCE (Remote Code Execution):`smbmap -u <user> -p <password> **-x <windows_command>** -H <target>` - (providing with a command **`-x`**) (`-x ipconfig`)
+    - RCE (Remote Code Execution):`smbmap -u <user> -p <password> -x <windows_command> -H <target>` - (providing with a command **`-x`**) (`-x ipconfig`)
     - Listing drives with **`-L`**
     - Inside of Drive with **`-r <drive>`** - as an example, `-r c$`
     - File Uploading: `smbmap -u <user> -p <password> -H <target> —upload /root/file c$/file`
