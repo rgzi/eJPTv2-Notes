@@ -29,7 +29,7 @@
 
 ### DNS RECON
 
-`dnsrecon** -d <domain name>` - gives information about DNS (NS, MX, etc - name and mail servers)
+`dnsrecon -d <domain name>` - gives information about DNS (NS, MX, etc - name and mail servers)
 
 [**dnsdumpster.com**](http://dnsdumpster.com) - dns lookup & research (more comprehensive than `dnsrecon`)
 
