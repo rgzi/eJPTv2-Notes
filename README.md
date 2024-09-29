@@ -67,7 +67,7 @@ intext:admin - searches for the given word in the body of the text somewhere
 
 ### Email Harvesting (*subdomains*, IPs, as well)
 
-    theHarvester -d <domain name> - searches through a domain name for finding credentials 
+   `theHarvester -d <domain name>` - searches through a domain name for finding credentials 
 
 ### Leaked passwords
 
