@@ -11,7 +11,7 @@
 
 ## Passive Recon
 
-`host** <domain name>` - finds the **ip** address of a domain name
+`host <domain name>` - finds the **ip** address of a domain name
 
 `robots.txt` (directory in URL) - indicates which portions of the website crawlers are allowed to visit.
 
@@ -19,7 +19,7 @@
 
 *builtwith, wappalyzer* (firefox extensions) - web technology indicators
 
-**`whatweb** <domain>` - web technology indicator in a terminal
+`whatweb <domain>` - web technology indicator in a terminal
 
 `sudo apt install ***webhttrack` -*** web site installer to a local directory (httrack)
 
