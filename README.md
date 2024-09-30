@@ -71,7 +71,7 @@ intext:admin - searches for the given word in the body of the text somewhere
 
 ### Leaked passwords
 
-[haveibeenpwned.com](http://haveibeenpwned.com)   - checking checking data breaches
+[haveibeenpwned.com](http://haveibeenpwned.com)   - checking data breaches
 
 ## Active Recon
 
